@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LSPD Recruitment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #1a3a6d;  /* Police blue */
+      --secondary: #e0e0e0;
+      --bg: #0a0f17;
+      --panel: #141e2d;
+      --border: #2b3d5a;
+      --gold: #c5a047;  /* Badge gold */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--secondary);
+    }
+
+    .glass-panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 2rem;
+      margin: 2rem auto;
+      width: 90%;
+      max-width: 1000px;
+    }
+
+    header.hero {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://i.imgur.com/0scPYKx.png');
+      background-size: cover;
+      background-position: center;
+      border-bottom: 2px solid var(--gold);
+      position: relative;
+    }
+
+    header.hero img.logo {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 1rem;
+    }
+
+    header.hero h1 {
+      font-size: 2.8rem;
+      color: var(--secondary);
+      text-transform: uppercase;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    header.hero p {
+      font-size: 1.3rem;
+      margin-top: 0.5rem;
+      color: var(--gold);
+      font-weight: bold;
+    }
+
+    .status {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .status-box {
+      flex: 1 1 30%;
+      margin: 1rem;
+      padding: 1.5rem;
+      background-color: #0d1725;
+      border-left: 4px solid var(--gold);
+      text-align: center;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .feature-card {
+      background-color: #0d1725;
+      border-left: 3px solid var(--accent);
+      padding: 1rem;
+      transition: transform 0.3s;
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .divisions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .division-card {
+      flex: 1 1 200px;
+      padding: 1rem;
+      background-color: #0d1725;
+      border: 2px solid var(--accent);
+      text-align: center;
+      border-radius: 4px;
+    }
+
+    .join-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 4px;
+      margin: 2rem auto;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .join-btn:hover {
+      background: #12294d;
+      transform: scale(1.05);
+    }
+
+    .badge {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .status, .divisions {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <img src="https://i.imgur.com/0scPYKx.png" alt="LSPD Badge" class="logo">
+    <h1>Los Santos Police Department</h1>
+    <p>Protect and Serve with Honor</p>
+  </header>
+
+  <section class="glass-panel">
+    <h2>Department Status</h2>
+    <div class="status">
+      <div class="status-box">🟢 Active Patrols: 12</div>
+      <div class="status-box">👮 Officers On-Duty: 15</div>
+      <div class="status-box">🚨 Response Time: 2min</div>
+    </div>
+  </section>
+
+  <section class="glass-panel">
+    <h2>Why Join LSPD?</h2>
+    <div class="features">
+      <div class="feature-card">⚖️ Equal Opportunity Employer</div>
+      <div class="feature-card">🏅 Career Advancement Programs</div>
+      <div class="feature-card">🎓 Comprehensive Training</div>
+      <div class="feature-card">🛡️ State-of-the-Art Equipment</div>
+      <div class="feature-card">🤝 Community Partnership</div>
+      <div class="feature-card">💼 Competitive Benefits</div>
+    </div>
+  </section>
+
+  <section class="glass-panel">
+    <h2>Specialized Divisions</h2>
+    <div class="divisions">
+      <div class="division-card">
+        <div class="badge">🚓</div>
+        Patrol Division
+      </div>
+      <div class="division-card">
+        <div class="badge">🚔</div>
+        SWAT Team
+      </div>
+      <div class="division-card">
+        <div class="badge">🐕</div>
+        K-9 Unit
+      </div>
+      <div class="division-card">
+        <div class="badge">🚦</div>
+        Traffic Enforcement
+      </div>
+      <div class="division-card">
+        <div class="badge">🕵️</div>
+        Detective Bureau
+      </div>
+    </div>
+  </section>
+
+  <div class="glass-panel" style="text-align:center">
+    <button class="join-btn">👮 Join LSPD Today</button>
+  </div>
+</body>
+</html>
